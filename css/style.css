@@ -6,6 +6,10 @@
     --white: #FFFFFF;
     --grey: #5D5D5D;
     --light-grey: #FBFBFB;
+    --mid-grey: #E1E1E1;
+    --dark-grey: #6F6E6E;
+    --light-beige: #F8F3F4;
+    --grey-grey: #A4A4A4;
 }
 
 body {
@@ -21,14 +25,16 @@ body {
 
 .header {
     background-color: var(--black);
-}
+    position: relative;
 
-.header__navigation {
-    display: none;
 }
 
 .header__logo {
     margin: 0 41px 0 0;
+}
+
+.header__logo:hover {
+    opacity: 0.6;
 }
 
 .header__wrapper {
@@ -42,9 +48,92 @@ body {
     margin: 0 0 0 34px;
 }
 
+.header__search {
+    fill: var(--white);
+}
+
+.header__search:hover {
+    fill: var(--dark-pink);
+}
+
 .header__button {
     border: none;
     background-color: transparent;
+    min-height: 75px;
+    fill: var(--white)
+}
+
+.header__button:hover {
+    fill: var(--dark-pink);
+}
+
+.header__navigation {
+    position: absolute;
+    background-color: var(--white);
+    box-shadow: 5px 5px 5px 5px var(--light-grey);
+    right: 0;
+    top: 75px;
+    width: 750px;
+    min-height: 764px;
+    z-index: 1;
+    display: none;
+}
+
+.header__button:hover+.header__navigation {
+    display: block;
+}
+
+.header__navigation:hover {
+    display: block;
+}
+
+.header__menu-title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    text-transform: uppercase;
+    margin: 37px 0 0 33px;
+}
+
+.header__menu-item {
+    margin: 20px 0 0 33px;
+}
+
+.header__menu-item__link {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: var(--dark-pink);
+    text-decoration: none;
+}
+
+.header__menu-item__link:hover {
+    text-decoration: underline;
+}
+
+.header__menu-sublist__item {
+    margin: 11px 0 0 22px;
+}
+
+.header__menu-sublist__item__link {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    color: var(--dark-grey);
+    text-decoration: none;
+}
+
+.header__menu-sublist__item__link:hover {
+    text-decoration: underline;
+}
+
+.header__link {
+    fill: var(--white);
+}
+
+.header__link:hover {
+    fill: var(--dark-pink);
 }
 
 .promo {
@@ -65,11 +154,14 @@ body {
     font-size: 48px;
     line-height: 58px;
     text-transform: uppercase;
+    position: relative;
 }
 
-.promo__heading-wrapper::before {
+.promo__heading::before {
     content: url(../img/pink-border.svg);
     margin-right: 16px;
+    position: absolute;
+    left: -25px;
 }
 
 .promo__subheading {
@@ -268,7 +360,6 @@ body {
     line-height: 24px;
     color: var(--white);
     margin-bottom: 16px;
-
 }
 
 .advantages__text {
@@ -286,7 +377,6 @@ body {
     background-position: center;
     background-size: cover;
     min-height: 448px;
-
 }
 
 .footer__top-wrapper {
@@ -345,6 +435,7 @@ body {
     text-transform: uppercase;
 }
 
+
 .footer__bottom {
     min-height: 79px;
     background-color: var(--black);
@@ -378,6 +469,14 @@ body {
     margin-top: 8px;
 }
 
+.footer__item:hover {
+    background-color: var(--dark-pink);
+}
+
+.footer__icon:hover {
+    fill: var(--white);
+}
+
 .footer__copyright {
     font-size: 16px;
     font-weight: 400;
@@ -391,4 +490,202 @@ body {
 
 .footer__form {
     margin-top: 32px;
+    display: flex;
+}
+
+.footer__input {
+    height: 49px;
+    width: 256px;
+    background-color: var(--mid-grey);
+    border: none;
+    padding: 7px 0 6px 22px;
+    -webkit-border-top-left-radius: 175px;
+    -webkit-border-bottom-left-radius: 175px;
+    -moz-border-radius-topleft: 175px;
+    -moz-border-radius-bottomleft: 175px;
+    border-top-left-radius: 175px;
+    border-bottom-left-radius: 175px;
+}
+
+.footer__button {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    color: var(--white);
+    background-color: var(--dark-pink);
+    border: none;
+    width: 100px;
+    padding: 7px 7px 6px 8px;
+    -webkit-border-top-right-radius: 175px;
+    -webkit-border-bottom-right-radius: 175px;
+    -moz-border-radius-topright: 175px;
+    -moz-border-radius-bottomright: 175px;
+    border-top-right-radius: 175px;
+    border-bottom-right-radius: 175px;
+}
+
+.footer__input:hover {
+    border: 1px solid var(--grey);
+}
+
+.footer__button:hover {
+    border: 1px solid var(--white);
+}
+
+.flex-wrapper {
+    display: flex;
+    margin: 64px 0 96px 0;
+}
+
+.heading-wrapper {
+    min-height: 148px;
+    background-color: var(--light-beige);
+    display: flex;
+    align-items: center;
+}
+
+.registration__heading-text {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    text-transform: uppercase;
+    color: var(--dark-pink);
+}
+
+.registration {
+    width: 360px;
+}
+
+.loyality {
+    width: 652px;
+    margin: 0 0 0 130px;
+}
+
+.registration__fieldset__legend {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19px;
+}
+
+.registration__fieldset__input {
+    width: 360px;
+    height: 45px;
+    margin: 20px 0 0 0;
+    border-color: var(--grey-grey);
+    padding: 0 0 0 17px;
+}
+
+..registration__button {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: var(--white);
+    background-color: var(--dark-pink);
+    border: none;
+    padding: 16px 0 17px 0;
+    margin: 39px 0 0 0;
+    width: 167px;
+    position: relative;
+}
+
+.registration__button::before {
+    content: url(../img/arrow.svg);
+    position: absolute;
+    right: 20px;
+}
+
+input#female,
+input#male {
+    width: 17px;
+    height: 17px;
+}
+
+.registration__fieldset__label {
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 13px;
+    margin: 0 20px 0 10px;
+}
+
+.registration__fieldset-wrapper {
+    margin: 0 0 35px 0;
+}
+
+::-webkit-input-placeholder {
+    color: var(--mid-grey)
+}
+
+::-moz-placeholder {
+    color: var(--mid-grey)
+}
+
+/* Firefox 19+ */
+:-moz-placeholder {
+    color: var(--mid-grey)
+}
+
+/* Firefox 18- */
+:-ms-input-placeholder {
+    color: var(--mid-grey)
+}
+
+.registration__fieldset__text {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 16px;
+    margin: 15px 0 0 0;
+    color: var(--grey-grey);
+}
+
+.registration__button {
+    margin: 40px 0 0 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: var(--white);
+    background-color: var(--dark-pink);
+    border: none;
+    padding: 16px 66px 17px 29px;
+    position: relative;
+}
+
+.registration__button::before {
+    content: url(../img/arrow.svg);
+    position: absolute;
+    right: 20px;
+}
+
+.loyality__heading {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 29px;
+    text-transform: uppercase;
+    margin: 0 0 22px 0;
+}
+
+.loyality__text {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 29px;
+    margin: 0 0 21px 0;
+}
+
+.loyality__list {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 29px;
+    margin: 0 0 0 25px;
+}
+
+.loyality__item {
+    margin: 0 0 16px 22px;
+    position: relative;
+}
+
+.loyality__item::before {
+    content: url(../img/list-marker.svg);
+    position: absolute;
+    left: -40px;
 }
