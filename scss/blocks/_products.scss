@@ -1,0 +1,92 @@
+.products {
+    margin-top: 97px;
+    &__heading {
+        width: 186px;
+        margin: 0 auto;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 36px;
+        color: $black;
+    }
+    
+    &__text {
+        width: 336px;
+        margin: 0 auto;
+        font-size: 14px;
+        line-height: 17px;
+        color: #9F9F9F;
+        margin-top: 6px;
+    }
+    
+    &__list {
+        margin-top: 48px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    &__item {
+        width: 360px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        background-color: $light-pink;
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+        &-heading {
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 16px;
+            text-transform: uppercase;
+        }
+        &-text {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 17px;
+            margin-top: 13px;
+            color: $grey;
+        }
+        &-text_pink {
+            color: $dark-pink;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19px;
+            margin-top: 18px;
+        }
+        &-wrapper {
+            margin: 25px 28px 20px 16px;
+        }
+
+        &-button {
+            display: none;
+        }
+    }
+    &__button {
+        min-width: 211px;
+        margin: 0 auto;
+        display: flex;
+        margin-top: 18px;
+        font-family: Lato;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        color: $dark-pink;
+        border: 1px solid $dark-pink;
+        padding: 14px 38px 13px 38px;
+        background-color: $white;
+        &:hover {
+            color: $light-grey;
+            background-color: $dark-pink;
+        }
+        &:focus {
+            color: $light-grey;
+            background-color: $dark-pink;
+            border: none;
+            outline: 1px solid $grey-grey;
+        }
+        &:active {
+            color: $light-grey;
+            background-color: $dark-pink;
+        }
+    } 
+}
+

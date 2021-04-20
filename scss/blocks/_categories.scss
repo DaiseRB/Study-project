@@ -1,0 +1,51 @@
+.categories__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.categories__item {
+    width: 360px;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.categories__item_woman {
+    background-image: url(../img/categories-woman.jpg);
+}
+
+.categories__item_man {
+    background-image: url(../img/categories-man.jpg);
+}
+
+.categories__item_kids {
+    background-image: url(../img/categories-kid.jpg);
+}
+
+.categories__item_accessories {
+    background-image: url(../img/categories-accessories.jpg);
+    background-repeat: no-repeat;
+    flex-grow: 1;
+    margin: 30px 0 0 0;
+    min-height: 180px;
+}
+
+.categories__text {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: $white;
+}
+
+.categories__heading {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    text-transform: uppercase;
+    color: $dark-pink;
+}

@@ -1,0 +1,39 @@
+.promo {
+    display: flex;
+    margin: 0 0 63px 0;
+
+    &__heading-wrapper {
+        background-color: var(--pink);
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        padding: 0 0 0 92px;
+    }
+
+    &__heading {
+        font-weight: 900;
+        font-size: 48px;
+        line-height: 58px;
+        text-transform: uppercase;
+        position: relative;
+
+        &::before {
+            content: url(../img/pink-border.svg);
+            margin-right: 16px;
+            position: absolute;
+            left: -25px;
+        }
+    }
+
+    &__subheading {
+        font-size: 37px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 38px;
+        display: block;
+    }
+
+    .heading-pink {
+        color: var(--dark-pink);
+    }
+}
