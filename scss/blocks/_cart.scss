@@ -1,0 +1,100 @@
+.cart {
+
+    &__wrapper {
+        
+    }
+
+&__list {
+    margin-top: 96px;
+}
+
+&__item {
+    display: flex;
+    margin: 96px 0 40px 0;
+    width: 652px;
+    height: 306px;
+    box-shadow: 10px 10px 10px 10px $shadow-grey;
+}
+
+&__heading {
+    font-family: Lato;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    width: 260px;
+    
+}
+
+&__item__wrapper {
+    padding: 22px 97px 0 31px;
+    position: relative;
+}
+
+&__text {
+    font-family: Lato;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    color: #575757;
+    margin: 0 0 6px 0;
+}
+
+&__cross__button {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    &:hover,
+    &:focus {
+        background-color: $pink;
+    }
+    &:active {
+        background-color: $dark-pink;
+    }
+    &::before {
+        content: url(../img/cross.png);
+    
+    }
+}
+
+&__text_price {
+    margin: 42px 0 6px 0;
+}
+
+&__text-pink {
+    color:$dark-pink;
+}
+
+&__item__input {
+    width: 43px;
+    height: 24px;
+    border: 1px solid $border-grey;
+    margin:0 0 0 25px;
+}
+
+&__button {
+    @include white-button;
+    width: 235px;
+    height: 50px;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+&__link {
+    display: block;
+    text-decoration: none;
+    @include white-button;
+    font-family: Lato;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 17px 40px 16px 39px;
+}
+&__navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 652px;
+    margin: 72px 0 0 0;
+}
+}

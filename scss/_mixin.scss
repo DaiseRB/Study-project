@@ -1,0 +1,37 @@
+@mixin pink-button {
+    color: $white;
+    background-color: $dark-pink;
+    border: none;
+    &:hover,
+    &:focus {
+        outline: 1px solid $white;
+    }
+    &:active {
+        background-color: $pink;
+        color: $dark-pink;
+    }
+}
+
+@mixin white-button {
+    color: $black;
+    background-color: transparent;
+    border: 1px solid $grey-grey;
+    &:hover,
+    &:focus {
+        outline: 1px solid $dark-pink;
+    }
+    &:active {
+        background-color: $pink;
+    }
+    font-family: Lato;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+@mixin heading-text {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    text-transform: uppercase;
+    color: $dark-pink;
+}

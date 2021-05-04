@@ -135,7 +135,7 @@
     border-top-left-radius: 175px;
     border-bottom-left-radius: 175px;
     &:hover {
-        outline: 1px solid $grey;
+        outline: 1px solid $dark-pink;
         border: none;
     }
 }
@@ -144,9 +144,6 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 17px;
-    color: $white;
-    background-color: $dark-pink;
-    border: none;
     width: 100px;
     padding: 7px 7px 6px 8px;
     -webkit-border-top-right-radius: 175px;
@@ -155,14 +152,7 @@
     -moz-border-radius-bottomright: 175px;
     border-top-right-radius: 175px;
     border-bottom-right-radius: 175px;
-    &:hover,
-    &:focus {
-        outline: 1px solid $white;
-    }
-    &:active {
-        background-color: $pink;
-        color: $dark-pink;
-    }
+    @include pink-button;
 }
 
 .footer__link {

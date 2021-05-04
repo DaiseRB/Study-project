@@ -137,6 +137,10 @@ body {
   clip: rect(0 0 0 0);
 }
 
+.flex-wrapper {
+  display: flex;
+}
+
 .header {
   background-color: #222222;
   position: relative;
@@ -277,8 +281,8 @@ body {
 }
 
 .promo__heading-wrapper {
-  background-color: var(--pink);
-  flex-grow: 1;
+  background-color: #F1E4E6;
+  width: 100%;
   display: flex;
   align-items: center;
   padding: 0 0 0 92px;
@@ -654,7 +658,7 @@ body {
 }
 
 .footer__input:hover {
-  outline: 1px solid #5D5D5D;
+  outline: 1px solid #F16D7F;
   border: none;
 }
 
@@ -662,9 +666,6 @@ body {
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
-  color: #FFFFFF;
-  background-color: #F16D7F;
-  border: none;
   width: 100px;
   padding: 7px 7px 6px 8px;
   -webkit-border-top-right-radius: 175px;
@@ -673,6 +674,9 @@ body {
   -moz-border-radius-bottomright: 175px;
   border-top-right-radius: 175px;
   border-bottom-right-radius: 175px;
+  color: #FFFFFF;
+  background-color: #F16D7F;
+  border: none;
 }
 
 .footer__button:hover, .footer__button:focus {
@@ -697,105 +701,113 @@ body {
   background-color: #F16D7F;
 }
 
-.flex-wrapper {
-  display: flex;
-  margin: 64px 0 96px 0;
-}
-
 .heading-wrapper {
   min-height: 148px;
-  background-color: var(--light-beige);
+  background-color: #F8F3F4;
   display: flex;
   align-items: center;
 }
 
+.heading-text {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  text-transform: uppercase;
+  color: #F16D7F;
+}
+
 .registration {
+  margin: 64px 0 96px 0;
+}
+
+.check-in {
   width: 360px;
   /* Firefox 19+ */
   /* Firefox 18- */
 }
 
-.registration__heading-text {
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 29px;
-  text-transform: uppercase;
-  color: var(--dark-pink);
-}
-
-.registration__fieldset__legend {
+.check-in__fieldset__legend {
   font-size: 16px;
   font-weight: 300;
   line-height: 19px;
 }
 
-.registration__fieldset__input {
+.check-in__fieldset__input {
   width: 360px;
   height: 45px;
   margin: 20px 0 0 0;
-  border-color: var(--grey-grey);
+  border-color: #A4A4A4;
   padding: 0 0 0 17px;
 }
 
-.registration__button {
+.check-in__button {
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
   text-transform: uppercase;
-  color: #FFFFFF;
-  background-color: #F16D7F;
-  border: none;
   padding: 16px 0 17px 0;
   margin: 39px 0 0 0;
   width: 167px;
   position: relative;
+  color: #FFFFFF;
+  background-color: #F16D7F;
+  border: none;
 }
 
-.registration__button::before {
+.check-in__button::before {
   content: url(../img/arrow.svg);
   position: absolute;
   right: 20px;
 }
 
-.registration input#female,
-.registration input#male {
+.check-in__button:hover, .check-in__button:focus {
+  outline: 1px solid #FFFFFF;
+}
+
+.check-in__button:active {
+  background-color: #F1E4E6;
+  color: #F16D7F;
+}
+
+.check-in input#female,
+.check-in input#male {
   width: 17px;
   height: 17px;
 }
 
-.registration__fieldset__label {
+.check-in__fieldset_label {
   font-size: 11px;
   font-weight: 300;
   line-height: 13px;
-  margin: 0 20px 0 10px;
+  margin: 35px 20px 0 10px;
 }
 
-.registration__fieldset-wrapper {
-  margin: 0 0 35px 0;
+.check-in__fieldset-wrapper {
+  margin: 31px 0 35px 0;
 }
 
-.registration ::-webkit-input-placeholder {
-  color: var(--mid-grey);
+.check-in ::-webkit-input-placeholder {
+  color: #E1E1E1;
 }
 
-.registration ::-moz-placeholder {
-  color: var(--mid-grey);
+.check-in ::-moz-placeholder {
+  color: #E1E1E1;
 }
 
-.registration :-moz-placeholder {
-  color: var(--mid-grey);
+.check-in :-moz-placeholder {
+  color: #E1E1E1;
 }
 
-.registration :-ms-input-placeholder {
-  color: var(--mid-grey);
+.check-in :-ms-input-placeholder {
+  color: #E1E1E1;
 }
 
-.registration__fieldset__text {
+.check-in__fieldset__text {
   font-size: 13px;
   font-weight: 300;
   line-height: 16px;
   margin: 15px 0 0 0;
-  color: var(--grey-grey);
+  color: #A4A4A4;
 }
 
 .loyality {
@@ -834,5 +846,126 @@ body {
   content: url(../img/list-marker.svg);
   position: absolute;
   left: -40px;
+}
+
+.cart__list {
+  margin-top: 96px;
+}
+
+.cart__item {
+  display: flex;
+  margin: 96px 0 40px 0;
+  width: 652px;
+  height: 306px;
+  box-shadow: 10px 10px 10px 10px #E5E5E5;
+}
+
+.cart__heading {
+  font-family: Lato;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  width: 260px;
+}
+
+.cart__item__wrapper {
+  padding: 22px 97px 0 31px;
+  position: relative;
+}
+
+.cart__text {
+  font-family: Lato;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  color: #575757;
+  margin: 0 0 6px 0;
+}
+
+.cart__cross__button {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 20px;
+  top: 25px;
+}
+
+.cart__cross__button:hover, .cart__cross__button:focus {
+  background-color: #F1E4E6;
+}
+
+.cart__cross__button:active {
+  background-color: #F16D7F;
+}
+
+.cart__cross__button::before {
+  content: url(../img/cross.png);
+}
+
+.cart__text_price {
+  margin: 42px 0 6px 0;
+}
+
+.cart__text-pink {
+  color: #F16D7F;
+}
+
+.cart__item__input {
+  width: 43px;
+  height: 24px;
+  border: 1px solid #EAEAEA;
+  margin: 0 0 0 25px;
+}
+
+.cart__button {
+  color: #222222;
+  background-color: transparent;
+  border: 1px solid #A4A4A4;
+  font-family: Lato;
+  font-weight: 300;
+  text-transform: uppercase;
+  width: 235px;
+  height: 50px;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.cart__button:hover, .cart__button:focus {
+  outline: 1px solid #F16D7F;
+}
+
+.cart__button:active {
+  background-color: #F1E4E6;
+}
+
+.cart__link {
+  display: block;
+  text-decoration: none;
+  color: #222222;
+  background-color: transparent;
+  border: 1px solid #A4A4A4;
+  font-family: Lato;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-family: Lato;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 17px 40px 16px 39px;
+}
+
+.cart__link:hover, .cart__link:focus {
+  outline: 1px solid #F16D7F;
+}
+
+.cart__link:active {
+  background-color: #F1E4E6;
+}
+
+.cart__navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 652px;
+  margin: 72px 0 0 0;
 }
 /*# sourceMappingURL=style.css.map */

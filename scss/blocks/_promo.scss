@@ -3,8 +3,8 @@
     margin: 0 0 63px 0;
 
     &__heading-wrapper {
-        background-color: var(--pink);
-        flex-grow: 1;
+        background-color: $pink;
+        width: 100%;
         display: flex;
         align-items: center;
         padding: 0 0 0 92px;
