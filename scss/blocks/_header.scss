@@ -1,0 +1,125 @@
+.header {
+    background-color: $black;
+    position: relative;
+
+    &__logo-link {
+        margin: 0 41px 0 0;
+        &:hover,
+        &:focus,
+        &:active {
+            opacity: 0.6;
+        }
+    }
+
+    &__wrapper {
+        min-height: 75px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__link {
+        margin: 0 0 0 34px;
+    }
+
+    &__search-link {
+        fill: $white;
+        &:hover,
+        &:focus {
+            fill: $pink; 
+        }
+        &:active {
+            fill: $dark-pink;
+        }
+    }
+
+    &__button {
+        border: none;
+        background-color: transparent;
+        min-height: 75px;
+        fill: $white;
+        &:hover,
+        &:focus {
+            fill: $pink;
+            border: 0;
+        }
+        &:active {
+            fill: $dark-pink;
+            border: 0;
+        }
+        &__button:hover+.header__navigation {
+            display: block;
+        }
+    
+
+    }
+
+    &__navigation {
+        position: absolute;
+        background-color: $white;
+        box-shadow: 5px 5px 5px 5px $light-grey;
+        right: 0;
+        top: 75px;
+        width: 750px;
+        min-height: 764px;
+        z-index: 1;
+        display: none;
+        &:hover {
+            display: block;
+        }
+    }
+
+    &__menu-title {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 17px;
+        text-transform: uppercase;
+        margin: 37px 0 0 33px;
+    }
+
+    &__menu-item {
+        margin: 20px 0 0 33px;
+        &link {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            text-transform: uppercase;
+            color: $dark-pink;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__menu-sublist__item {
+        margin: 11px 0 0 22px;
+        &__link {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            color: $dark-grey;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+            &:focus {
+                color: $grey-grey;
+            }
+            &:active {
+                color: $dark-pink;
+            }
+    }
+    }
+
+    &__link {
+        fill: $white;
+        &:hover,
+        &:focus {
+            fill: $pink;
+        }
+        &:active {
+            fill: $dark-pink;
+        }
+    }
+}
